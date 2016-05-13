@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="test">
+  <head>
+    <base href="/">
+
+    <link rel='stylesheet' type='text/css' href='style.css'/>
+  </head>
+
+  <body ng-controller="ApplicationController">
+    <div ui-view></div>
+    <script type="text/javascript" src="/3rd-party/kng/kng.libs.js"></script>
+    <script type="text/javascript" src="/3rd-party/angular/angular.js"></script>
+    <script type="text/javascript" src="/3rd-party/angular-ui-router/angular-ui-router.js"></script>
+    <script type="text/javascript" src="/3rd-party/angular-translate/angular-translate.js"></script>
+    <script type="text/javascript" src="/3rd-party/kng/kng.js"></script>
+
+    <script type="text/javascript" src="/test.js"></script>
+    <script type="text/javascript" src="/envConfig.js"></script>
+    <script type="text/javascript" src="/appConfig.js"></script>
+    <script type="text/javascript" src="/app/home/home.js"></script>
+    <script type="text/javascript" src="/common/directives/draggable.directive.js"></script>
+    <script type="text/javascript" src="/common/directives/dropTarget.directive.js"></script>
+
+    <div id="container">
+      <div class="select">
+        <ul>
+          <li ng-repeat="item in ctrl.items">
+            <div dropzone="copy file:image/png file:image/gif file:image/jpeg" class="item" id="{{ item }}" draggable item="{{ item }}">
+              {{ item }}
+            </div>
+          </li>
+        </ul>
+      </div>
+<!--       <div>
+        <div class="bin" droppable drop="ctrl.dropped" ></div>
+      </div> -->
+    </div>
+  </body>
+</html>

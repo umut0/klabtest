@@ -1,0 +1,9 @@
+<!-- TODO: modify the template to support drag and drop -->
+
+<div droppable id="drop-target" class="drop-target"></div>
+
+<div>
+  <div draggable class="doc" ng-repeat="doc in searchResult" id='image-{{$index}}'>
+    <img ng-src="{{doc.getImagePath(0, 'w120')}}"/>
+  </div>
+</div>

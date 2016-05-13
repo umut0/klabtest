@@ -1,0 +1,85 @@
+.doc {
+  margin: 10px;
+}
+
+.doc > img {
+  border: 1px solid black;
+}
+
+.drop-target {
+  background-color: lightgray;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+}
+
+
+/* TODO: insert your css here */
+body{ margin: 0 }
+li { list-style-type: none}
+.bin {
+    width: 300px;
+    height: 100vh;
+    float:right; 
+    background: gray;
+    padding: 20px;
+}
+.bin, .item {
+    font-size: 32px;
+    text-align: center;
+    margin: 0 5px;
+}
+.item {
+    min-height: 150px;
+    min-width: 150px;
+    background: blue;
+    float: right;
+    transition: all 0.2s ease;
+    margin-top: 25px;
+}
+.bin.over { background: pink; }
+.drag { opacity: 0.5; }
+#container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+}
+.select { float: left; }
+
+
+/* UMUTS STYLES */
+#drop-target {
+    border: 2px solid lightgray;
+    z-index: 2;
+}
+
+.over {
+    /* highlight the droptarget box when dragging image over*/
+    border: 2px solid green !important;
+}
+
+#drop-target .doc {
+    /*prevent flickering when hovering over already dragged in images */
+    pointer-events: none; 
+}
+
+.added {
+    /*opacity: 0.7;*/
+    position: relative;
+}
+
+.added:after {
+    color: lightgreen;
+    font-size: 30px;
+    font-weight: bold;
+    content: '\2713';
+    position: absolute; 
+    bottom: 0px;
+    left: 100px; 
+    /*margin-top: -{50% of the element's height}; 
+    left: 60px; 
+    /*margin-left: -{50% of the element's width};
+}*/
