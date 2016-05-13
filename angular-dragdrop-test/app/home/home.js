@@ -27,5 +27,4 @@ angular.module('home').controller('HomeController', ['$scope', 'Search', functio
       dropArray.push(id);
   }
 
-
 }]);

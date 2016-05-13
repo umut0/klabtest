@@ -67,7 +67,6 @@ li { list-style-type: none}
 }
 
 .added {
-    /*opacity: 0.7;*/
     position: relative;
 }
 
@@ -79,7 +78,4 @@ li { list-style-type: none}
     position: absolute; 
     bottom: 0px;
     left: 100px; 
-    /*margin-top: -{50% of the element's height}; 
-    left: 60px; 
-    /*margin-left: -{50% of the element's width};
-}*/
+}
